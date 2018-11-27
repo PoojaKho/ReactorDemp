@@ -5,3 +5,15 @@ spring:
       contactPoints: localhost
       port: 9042
       schemaAction: CREATE_IF_NOT_EXISTS
+  cloud:
+    stream:
+     default:
+      contentType: application/json
+     bindings:
+      #name of channel
+      dummyTopicOutput:
+       destination: dummy_output_topic
+      dummyTopicInputFirst:
+       destination: dummy_input_topic_one
+      dummyTopicInputSecond:
+       destination: dummy_input_topic_second
